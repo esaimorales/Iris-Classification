@@ -15,16 +15,6 @@ from analysis import lda
 from analysis import qda
 
 # extract data from text file
-
-data = []
-for i in range(10):
-    data.append(i)
-
-data2 = [i for i in range(10)]
-
-print data2
-print data
-
 iris_data = parse_file('training.txt')
 
 # prepare training dataset
@@ -60,4 +50,4 @@ average_sigma = (sigma1 + sigma2 + sigma3)/3
 
 # do LDA and QDA
 lda(mu1, mu2, mu3, average_sigma, test_setosa, test_versicolor, test_virginica)
-qda(mu1, mu2, mu3, sigma1, sigma2, sigma3)
+qda(mu1, mu2, mu3, sigma1, sigma2, sigma3, test_setosa, test_versicolor, test_virginica)

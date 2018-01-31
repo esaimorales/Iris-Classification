@@ -16,14 +16,6 @@ def sigma(matrix):
     return numpy.cov(matrix.T)
 
 
-def pdf(x, mu, sigma):
-    P = x.shape[0]
-
-    prob = 1 / math.sqrt(((2 * math.pi) ** P) * numpy.linalg.det(sigma))
-    ins = numpy.dot(numpy.dot((x - mu).T, numpy.linalg.inv(sigma)), x - mu)
-    exp = math.exp(-0.5 * ins)
-
-    return prob * exp
 
 def probability(mu, sigma, x):
     a = 1/( (math.sqrt(2*math.pi) ** 4) *  )

@@ -23,25 +23,6 @@ def report():
 # performs linear discriminant analysis on given test datasets
 def lda(mu1, mu2, mu3, sigma, test1, test2, test3):
 
-    # x = test1[0]
-    # print probability_density(mu1, sigma, x)
-    # print probability_density(mu2, sigma, x)
-    # print probability_density(mu3, sigma, x)
-    #
-    # print '------------------'
-    #
-    # y = test2[0]
-    # print probability_density(mu1, sigma, y)
-    # print probability_density(mu2, sigma, y)
-    # print probability_density(mu3, sigma, y)
-    #
-    # print '------------------'
-
-    # z = test3[0]
-    # print probability_density(mu1, sigma, z)
-    # print probability_density(mu2, sigma, z)
-    # print probability_density(mu3, sigma, z)
-
     res1, res2, res3 = [], [], []
     for data_point in test1:
         values = []

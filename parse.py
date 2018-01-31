@@ -9,7 +9,6 @@ def parse_file(file_name):
     with open(file_name) as f:
         return [[float(val) for val in line.split(',')[:4]] for line in f]
 
-
 def get_train(data):
     return (data[0:40], data[50:90], data[100:140])
 

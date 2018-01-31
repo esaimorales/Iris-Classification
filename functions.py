@@ -7,15 +7,13 @@ def get_mu(matrix):
 
 def get_sigma(matrix, mu):
     height, width = matrix.shape[0], matrix.shape[1]
-    cov = numpy.array([[float(0) for i in range(width)] for j in range(width)])
+    covariance_mtx = numpy.array([[float(0) for i in range(width)] for j in range(width)])
     for row in matrix:
-        cov += (row - mu.T).T * (row - mu.T)
-    return cov/height
+        covariance_mtx += (row - mu.T).T * (row - mu.T)
+    return covariance_mtx/height
 
 def sigma(matrix):
     return numpy.cov(matrix.T)
 
-
-
 def probability(mu, sigma, x):
-    a = 1/( (math.sqrt(2*math.pi) ** 4) *  )
+    a = 1/( (math.sqrt(2*math.pi) ** 4)   )

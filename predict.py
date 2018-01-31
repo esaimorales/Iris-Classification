@@ -11,6 +11,9 @@ from functions import sigma
 # from functions import lda
 # from functions import qda
 
+from analysis import lda
+from analysis import qda
+
 # extract data from text file
 iris_data = parse_file('training.txt')
 
@@ -35,6 +38,16 @@ mu3 = get_mu(virginica)
 # get sigma
 sigma1 = get_sigma(setosa, mu1)
 sigma2 = get_sigma(versicolor, mu2)
-simga3 = get_sigma(virginica, mu3)
+sigma3 = get_sigma(virginica, mu3)
 
-# get probability distribution
+# print sigma matrices
+print sigma1
+print sigma2
+print sigma3
+
+# prepare average sigma for Linear Discriminant Analysis
+average_sigma = (sigma1 + sigma2 + sigma3)/3
+
+# do LDA and QDA
+lda(mu1, mu2, mu3, average_sigma)
+qda(mu1, mu2, mu3, sigma1, sigma2, sigma3)

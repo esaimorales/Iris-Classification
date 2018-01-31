@@ -15,6 +15,16 @@ from analysis import lda
 from analysis import qda
 
 # extract data from text file
+
+data = []
+for i in range(10):
+    data.append(i)
+
+data2 = [i for i in range(10)]
+
+print data2
+print data
+
 iris_data = parse_file('training.txt')
 
 # prepare training dataset
@@ -41,13 +51,13 @@ sigma2 = get_sigma(versicolor, mu2)
 sigma3 = get_sigma(virginica, mu3)
 
 # print sigma matrices
-print sigma1
-print sigma2
-print sigma3
+# print sigma1
+# print sigma2
+# print sigma3
 
 # prepare average sigma for Linear Discriminant Analysis
 average_sigma = (sigma1 + sigma2 + sigma3)/3
 
 # do LDA and QDA
-lda(mu1, mu2, mu3, average_sigma)
+lda(mu1, mu2, mu3, average_sigma, test_setosa, test_versicolor, test_virginica)
 qda(mu1, mu2, mu3, sigma1, sigma2, sigma3)

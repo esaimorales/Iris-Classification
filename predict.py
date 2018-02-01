@@ -42,5 +42,7 @@ sigma3 = sigma(virginica)
 average_sigma = (sigma1 + sigma2 + sigma3)/3
 
 # do LDA and QDA
-lda(mu1, mu2, mu3, average_sigma, test_setosa, test_versicolor, test_virginica)
-qda(mu1, mu2, mu3, sigma1, sigma2, sigma3, test_setosa, test_versicolor, test_virginica)
+# lda(mu1, mu2, mu3, average_sigma, test_setosa, test_versicolor, test_virginica)
+# qda(mu1, mu2, mu3, sigma1, sigma2, sigma3, test_setosa, test_versicolor, test_virginica)
+
+lda(mu1, mu2, mu3, average_sigma, setosa, versicolor, virginica)

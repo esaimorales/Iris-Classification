@@ -41,7 +41,7 @@ def lda(mu1, mu2, mu3, sigma, test1, test2, test3):
         values.append(probability_density(mu3, sigma, data_point))
         res1.append(values)
 
-    # report(res1)
+    report(res1)
 
     for data_point in test2:
         values = []
@@ -50,7 +50,7 @@ def lda(mu1, mu2, mu3, sigma, test1, test2, test3):
         values.append(probability_density(mu3, sigma, data_point))
         res2.append(values)
 
-    # report(res2)
+    report(res2)
 
     for data_point in test3:
         values = []
@@ -59,7 +59,7 @@ def lda(mu1, mu2, mu3, sigma, test1, test2, test3):
         values.append(probability_density(mu3, sigma, data_point))
         res3.append(values)
 
-    # report(res3)
+    report(res3)
 
 # performs quadratic discriminant analysis on given test datasets
 def qda(mu1, mu2, mu3, sigma1, sigma2, sigma3, test1, test2, test3):
@@ -72,7 +72,7 @@ def qda(mu1, mu2, mu3, sigma1, sigma2, sigma3, test1, test2, test3):
         values.append(probability_density(mu3, sigma3, data_point))
         res1.append(values)
 
-    report(res1)
+    # report(res1)
 
     for data_point in test2:
         values = []
@@ -81,7 +81,7 @@ def qda(mu1, mu2, mu3, sigma1, sigma2, sigma3, test1, test2, test3):
         values.append(probability_density(mu3, sigma3, data_point))
         res2.append(values)
 
-    report(res2)
+    # report(res2)
 
     for data_point in test3:
         values = []
@@ -90,4 +90,4 @@ def qda(mu1, mu2, mu3, sigma1, sigma2, sigma3, test1, test2, test3):
         values.append(probability_density(mu3, sigma3, data_point))
         res3.append(values)
 
-    report(res3)
+    # report(res3)

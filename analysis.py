@@ -15,7 +15,7 @@ def probability_density(mu, sigma, data_point):
     # print 'product size', prd.shape
 
     e_bs = math.exp( (-0.5) * np.dot(prd, (data_point - mu)) )
-    frac = 1/( (math.sqrt(2*math.pi) ** 4) * np.linalg.det(sigma))
+    frac = 1/( (math.sqrt(2*math.pi) ** data_point.shape[0]) * np.linalg.det(sigma))
     return frac * e_bs
 
 # reports analysis data and errors

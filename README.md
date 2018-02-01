@@ -1,2 +1,2 @@
 # Iris-Classification
-An Iris plant classifier using LDA and QDA
+An Iris plant classifier using Linear Discriminant Analysis and Quadratic Linear Analysis

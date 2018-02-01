@@ -8,8 +8,6 @@ import math
 from functions import get_mu
 from functions import get_sigma
 from functions import sigma
-# from functions import lda
-# from functions import qda
 
 from analysis import lda
 from analysis import qda
@@ -36,14 +34,9 @@ mu2 = get_mu(versicolor)
 mu3 = get_mu(virginica)
 
 # get sigma
-sigma1 = get_sigma(setosa, mu1)
-sigma2 = get_sigma(versicolor, mu2)
-sigma3 = get_sigma(virginica, mu3)
-
-# print sigma matrices
-# print sigma1
-# print sigma2
-# print sigma3
+sigma1 = sigma(setosa)
+sigma2 = sigma(versicolor)
+sigma3 = sigma(virginica)
 
 # prepare average sigma for Linear Discriminant Analysis
 average_sigma = (sigma1 + sigma2 + sigma3)/3

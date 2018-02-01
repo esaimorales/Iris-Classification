@@ -4,7 +4,6 @@ import math
 # returns mean (mu) of matrix
 def get_mu(matrix):
     mu = np.mean(np.matrix(matrix), axis=0)
-    # print mu.T
     return mu.T
 
 # returns covariance matrix given matrix and mu (divides by N)
@@ -19,5 +18,4 @@ def get_sigma(matrix, mu):
 def sigma(matrix):
     return np.cov(matrix.T)
 
-# TODO figure out which sigma function to use
-# both provide similar results
+# TODO figure out which sigma function to use; both provide similar results

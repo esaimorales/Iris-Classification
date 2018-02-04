@@ -18,4 +18,9 @@ def get_sigma(matrix, mu):
 def sigma(matrix):
     return np.cov(matrix.T)
 
-# TODO figure out which sigma function to use; both provide similar results
+# returns identity covariance matrix
+def get_id_matrix(matrix):
+    mtx = np.zeros((4,4))
+    for i in range(matrix.shape[0]):
+        mtx[i,i] = matrix[i,i]
+    return mtx

@@ -12,7 +12,6 @@ def probability_density(mu, sigma, data_point):
 # reports analysis data
 def report(results):
     for row in results:
-        # print row
         max_pd = row.index(max(row))
         if max_pd == 0:
             print 'Iris-setosa', max(row)
